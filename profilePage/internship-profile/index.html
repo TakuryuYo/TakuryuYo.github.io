@@ -30,121 +30,248 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- ヘッダー -->
-    <div class="navbar bg-base-100 shadow-sm" id="fade">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">daisyUI</a>
-      </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li><a class="opa">Link</a></li>
-          <li>
-            <details>
-              <summary>Link</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
-                <li><a href="./calendar.html">カレンダー</a></li>
-                <li><a href="./introduction.html">経歴</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!-- header will be loaded from header.html -->
+    <div id="site-header-placeholder" aria-hidden="true"></div>
     <!-- <p style="background-image: src('./image/bred2.jpg');"> -->
 
-    <button class="btn">Button</button>
-    <button class="btn btn-primary">Button2</button>
+    <!-- <button class="btn">Button</button>
+    <button class="btn btn-primary">Button2</button> -->
 
-    <div class="content w-52  rounded">
-      <h1 class="text-center"><i class="fas fa-user-circle"></i>Profile</h1>
-      <!-- <figure class="profile-image flex justify-center">
-        <img src="./image/unnamed.jpg" />
-      </figure> -->
-      <div class="avatar  flex justify-center">
-        <div class="w-52 rounded trans">
-          <img src="./image/unnamed.jpg" />
+    <main class="content" name="main-content" role="main" aria-label="Main profile content">
+      <div class="profile-header flex flex-col items-center md:flex-row md:items-start gap-6">
+        <!-- <div class="avatar">
+          <div class="w-40 md:w-48 rounded-full overflow-hidden trans">
+            <img src="./image/unnamed.jpg" alt="Profile photo of 楊 卓龍" />
+          </div>
+        </div> -->
+        <div class="text-center md:text-left">
+          <h1 class="text-3xl font-semibold"><i class="fas fa-user-circle mr-2"></i><span data-i18n="name">楊 卓龍</span></h1>
+          <p class="text text-gray-700 mt-2" data-i18n="summary">東京都立大学 システムデザイン学部 情報科学科 4年生 — 船井総合研究所 長期インターン（ケーススタディ中）</p>
+          <div class="mt-3 flex gap-2 justify-center md:justify-start">
+            <a class="btn btn-outline btn-sm" href="./calendar.html" title="カレンダーへ">カレンダー</a>
+            <a class="btn btn-outline btn-sm" href="./introduction.html" title="経歴へ">経歴</a>
+          </div>
         </div>
       </div>
-      <div id="dbox">
-        <h2 class="text-center cont ">楊 卓龍</h2>
-      </div>
-      <div class="box7">
-        <p class="text text-center">
-          船井総合研究所の長期インターンのケーススタディ中
-        </p>
-      </div>
 
-      <h3 class="heading-lv3 text-center">自己紹介</h3>
-      <p class="text text-center">
-        東京都立大学時システムデザイン学部情報科学科<span class="bold"
-          >4年生</span
-        >です<br />
-        よろしくお願いします。
-      </p>
+      <!-- Sections -->
+      <section class="mt-6 space-y-4">
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-id-badge mr-2 text-teal-600"></i><span data-i18n="profile_title">自己紹介 (Profile)</span></h2>
+          <p class="mt-2" data-i18n="profile_text">プログラミング・UI設計・問題解決が得意です。チームでの開発・コミュニケーションを大切にします。</p>
+        </article>
 
-      <div class="dropdown flex justify-center">
-        <div tabindex="0" role="button" class="btn m-1 text-blue-500 underline ">他のリンクへ</div>
-        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-          <li><a href="./calendar.html" class="text-blue-500 underline">カレンダー</a></li>
-          <li><a href="./introduction.html" class="text-blue-500 underline">イントロ</a></li>
-        </ul>
-      </div>
-    </div>
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-briefcase mr-2 text-yellow-600"></i><span data-i18n="achievement_title">実績 (Achievement)</span></h2>
+          <ul class="list-disc list-inside mt-2">
+            <li data-i18n="achievement_item1">長期インターンでのケーススタディ参加</li>
+            <li data-i18n="achievement_item2">学内プロジェクトで Web アプリを開発</li>
+          </ul>
+        </article>
+
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-graduation-cap mr-2 text-indigo-600"></i><span data-i18n="history_title">学歴 (History)</span></h2>
+          <p class="mt-2" data-i18n="history_text">東京都立大学 システムデザイン学部 情報科学科 — 予定卒業: 20XX</p>
+        </article>
+
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-code mr-2 text-green-600"></i><span data-i18n="skills_title">スキル (Skills)</span></h2>
+          <p class="mt-2" data-i18n="skills_text">HTML, CSS, JavaScript, Tailwind CSS, 基本的なサーバーサイド知識</p>
+        </article>
+
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-star mr-2 text-red-500"></i><span data-i18n="strength_title">強み (Strength)</span></h2>
+          <p class="mt-2" data-i18n="strength_text">粘り強く課題に向き合う力、ドキュメント化と協調性に優れる点。</p>
+        </article>
+
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-folder-open mr-2 text-purple-600"></i><span data-i18n="portfolio_title">成果物 (Portfolio)</span></h2>
+          <ul class="mt-2 space-y-1">
+            <li><a href="./calendar.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item1">カレンダー（ローカルページ）</a></li>
+            <li><a href="./introduction.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item2">イントロ（ローカルページ）</a></li>
+            <li><a href="https://github.com/TakuryuYo" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item3">GitHub プロフィール</a></li>
+          </ul>
+        </article>
+
+        <article class="section bg-white p-4 rounded shadow-sm">
+          <h2 class="text-xl font-medium"><i class="fas fa-link mr-2 text-sky-600"></i><span data-i18n="links_title">リンク (Links)</span></h2>
+          <ul class="mt-2 space-y-1">
+            <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="link_twitter">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="link_linkedin">LinkedIn</a></li>
+            <li><a href="mailto:your.email@example.com" class="text-blue-600 underline" data-i18n="link_mail">メール</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script>
+      // Load shared header.html into the placeholder and then initialize header-related handlers
+      (function loadHeader(){
+        const placeholder = document.getElementById('site-header-placeholder');
+        fetch('./header.html')
+          .then(r => r.text())
+          .then(html => {
+            placeholder.innerHTML = html;
+            // mark header as visible for screen readers
+            placeholder.setAttribute('aria-hidden','false');
+            // after header inserted, attach language button handlers
+            const jp = document.getElementById('lang-jp');
+            const en = document.getElementById('lang-en');
+            if(jp) jp.addEventListener('click', ()=> setLanguage('jp'));
+            if(en) en.addEventListener('click', ()=> setLanguage('en'));
+            // apply saved language (setLanguage already called on load, but reapply to ensure header text updated if needed)
+            const saved = localStorage.getItem('preferredLang') || 'jp';
+            setLanguage(saved);
+          })
+          .catch(err => {
+            console.error('Failed to load header.html', err);
+          });
+      })();
+
+    
+      // Simple i18n dictionary
+      const i18n = {
+        jp: {
+          name: '楊 卓龍',
+          summary: '東京都立大学 システムデザイン学部 情報科学科 4年生 — 船井総合研究所 長期インターン（ケーススタディ中）',
+          profile_title: '自己紹介 (Profile)',
+          profile_text: 'プログラミング・UI設計・問題解決が得意です。チームでの開発・コミュニケーションを大切にします。',
+          achievement_title: '実績 (Achievement)',
+          achievement_item1: '長期インターンでのケーススタディ参加',
+          achievement_item2: '学内プロジェクトで Web アプリを開発',
+          history_title: '学歴 (History)',
+          history_text: '東京都立大学 システムデザイン学部 情報科学科 — 予定卒業: 20XX',
+          skills_title: 'スキル (Skills)',
+          skills_text: 'HTML, CSS, JavaScript, Tailwind CSS, 基本的なサーバーサイド知識',
+          strength_title: '強み (Strength)',
+          strength_text: '粘り強く課題に向き合う力、ドキュメント化と協調性に優れる点。',
+          portfolio_title: '成果物 (Portfolio)',
+          portfolio_item1: 'カレンダー（ローカルページ）',
+          portfolio_item2: 'イントロ（ローカルページ）',
+          portfolio_item3: 'GitHub プロフィール',
+          links_title: 'リンク (Links)',
+          link_twitter: 'Twitter',
+          link_linkedin: 'LinkedIn',
+          link_mail: 'メール'
+        },
+        en: {
+          name: 'Takuryu Yang',
+          summary: 'Student, Systems Design — Department of Information Science. Intern at Funai Research Institute (case study).',
+          profile_title: 'Profile',
+          profile_text: 'Skilled in programming, UI design and problem solving. Values teamwork and clear communication.',
+          achievement_title: 'Achievement',
+          achievement_item1: 'Participated in long-term internship case study',
+          achievement_item2: 'Developed web applications in university projects',
+          history_title: 'History',
+          history_text: 'Tokyo Metropolitan University — Systems Design, Information Science (expected graduation: 20XX)',
+          skills_title: 'Skills',
+          skills_text: 'HTML, CSS, JavaScript, Tailwind CSS, basic server-side knowledge',
+          strength_title: 'Strength',
+          strength_text: 'Persistent problem solver; good at documentation and collaboration.',
+          portfolio_title: 'Portfolio',
+          portfolio_item1: 'Calendar (local page)',
+          portfolio_item2: 'Introduction (local page)',
+          portfolio_item3: 'GitHub profile',
+          links_title: 'Links',
+          link_twitter: 'Twitter',
+          link_linkedin: 'LinkedIn',
+          link_mail: 'Email'
+        }
+      };
+
+      function setLanguage(lang){
+        const dict = i18n[lang] || i18n.jp;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if(dict[key]) el.textContent = dict[key];
+        });
+        localStorage.setItem('preferredLang',''+lang);
+        // update which language buttons are visible in the header (show only the alternate)
+        try{ updateLangButtons(lang); }catch(e){ /* header not ready yet */ }
+      }
+
+      // Show only the alternate language button inside the LNG details.
+      function updateLangButtons(lang){
+        const jpBtn = document.getElementById('lang-jp');
+        const enBtn = document.getElementById('lang-en');
+        if(!jpBtn || !enBtn) return;
+        if(lang === 'jp'){
+          jpBtn.style.display = 'none';
+          enBtn.style.display = 'inline-block';
+          jpBtn.setAttribute('aria-hidden','true');
+          enBtn.setAttribute('aria-hidden','false');
+        } else {
+          enBtn.style.display = 'none';
+          jpBtn.style.display = 'inline-block';
+          enBtn.setAttribute('aria-hidden','true');
+          jpBtn.setAttribute('aria-hidden','false');
+        }
+      }
+
+      // Note: language button event listeners are attached after header.html is loaded.
+      // On load, apply saved language or default to JP (content texts will update once header has been fetched)
+      (function(){
+        const saved = localStorage.getItem('preferredLang') || 'jp';
+        setLanguage(saved);
+      })();
+    </script>
   </body>
 </html>
 <style>
+  :root{
+    --accent:#4ec4d3;
+    --muted:#f6f8fb;
+  }
+
+  html,body{height:100%;}
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, 'Helvetica Neue', Arial;
+    /* 背景画像をやめて単色の水色に統一 */
+    background-color: #d6f3f6; /* 淡い水色 */
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* Navbar のグラデーション */
   #fade {
-  background: linear-gradient(to bottom, #fff, #4ec4d3);
-  /*グラデーション以外は省略*/
-  }
-  .opa {
-    color: rgba(0,0,0,0.3);
-
-  }
-  h1 {
-    font-size: 32px;
-    font-style: italic;
-  }
-  .text {
-    margin: 16px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .text-center {
-    text-align: center;
-  }
-  .trans img {
-    transition: .3s;
-  }
-  .trans img:hover {
-  opacity: 0.5;
-}
-
-  #dbox {
-    padding: 0.5em 0;
-    margin: 10px;
-    border: double 5px #4ec4d3;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-  }
-  .cont {
-    margin: 0;
-    padding: 0;
-  }
-  .box7 {
-    padding: 0.5em 1em;
-    margin: 0;
-    color: #474747;
-    background: whitesmoke; /*背景色*/
-    border-left: double 7px #4ec4d3; /*左線*/
-    border-right: double 7px #4ec4d3; /*右線*/
+    background: linear-gradient(to bottom, #fff, var(--accent));
   }
 
-  .bold {
-    font-weight: bold;
+  .opa { color: rgba(0,0,0,0.45); }
+
+  /* main content を画面幅いっぱいに近づける */
+  .content{
+    width: calc(100% - 40px);
+    max-width: 1100px; /* 任意: 中央で美しく見える最大幅 */
+    margin: 24px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   }
-  .profile-image {
-    margin: 16px 0 0;
-    text-align: center;
+
+  h1{font-size:1.75rem;}
+  .text{margin:0.5rem 0 0;font-size:1rem;line-height:1.6;color:#333}
+
+  .trans img{transition: .3s; display:block; width:100%; height:auto}
+  .trans img:hover{opacity:0.8}
+
+  .avatar .w-40{width:10rem}
+  .avatar .w-48{width:12rem}
+
+  .section{background:#fff}
+
+  .section h2{display:flex;align-items:center;gap:0.5rem}
+
+  /* ボタン系の調整 */
+  .btn{padding:0.4rem 0.8rem;border-radius:6px;border:1px solid #d1d5db;background:white}
+  .btn-outline{background:transparent;border-color:var(--accent);color:var(--accent)}
+
+  /* レスポンシブ */
+  @media (max-width:768px){
+    .content{width:calc(100% - 24px);padding:16px;margin:12px}
+    .profile-header{flex-direction:column;align-items:center}
+    .text-left{ text-align:center }
   }
   /* .profile-image img {
     width: 250px;
@@ -168,13 +295,5 @@
     background-color: #54b1e5;
   } */
 
-  .content {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 16px;
-    background-color: #fff;
-    box-shadow: 4px 4px #757982;
-    
-  }
+  /* duplicate legacy .content removed to keep the new layout rules */
 </style>
