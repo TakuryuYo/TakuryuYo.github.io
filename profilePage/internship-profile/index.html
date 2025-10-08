@@ -47,7 +47,7 @@
         </div> -->
         <div class="text-center md:text-left">
           <h1 class="text-3xl font-semibold"><i class="fas fa-user-circle mr-2"></i><span data-i18n="name">楊 卓龍</span></h1>
-          <p class="text text-gray-700 mt-2" data-i18n="summary">東京都立大学 システムデザイン学部 情報科学科 4年生 — 船井総合研究所 長期インターン（ケーススタディ中）</p>
+          <p class="text text-gray-700 mt-2" data-i18n="summary"></p>
           <div class="mt-3 flex gap-2 justify-center md:justify-start">
             <a class="btn btn-outline btn-sm" href="./calendar.html" title="カレンダーへ">カレンダー</a>
             <a class="btn btn-outline btn-sm" href="./introduction.html" title="経歴へ">経歴</a>
@@ -59,43 +59,47 @@
       <section class="mt-6 space-y-4">
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-id-badge mr-2 text-teal-600"></i><span data-i18n="profile_title">自己紹介 (Profile)</span></h2>
-          <p class="mt-2" data-i18n="profile_text">プログラミング・UI設計・問題解決が得意です。チームでの開発・コミュニケーションを大切にします。</p>
+          <p class="mt-2" data-i18n="profile_text"></p>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-briefcase mr-2 text-yellow-600"></i><span data-i18n="achievement_title">実績 (Achievement)</span></h2>
           <ul class="list-disc list-inside mt-2">
-            <li data-i18n="achievement_item1">長期インターンでのケーススタディ参加</li>
-            <li data-i18n="achievement_item2">学内プロジェクトで Web アプリを開発</li>
+            <!-- <li data-i18n="achievement_item1">長期インターンでのケーススタディ参加</li>
+            <li data-i18n="achievement_item2">学内プロジェクトで Web アプリを開発</li> -->
+            <li data-i18n="achievement_item1"></li>
+            <li data-i18n="achievement_item2"></li>
           </ul>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-graduation-cap mr-2 text-indigo-600"></i><span data-i18n="history_title">学歴 (History)</span></h2>
-          <p class="mt-2" data-i18n="history_text">東京都立大学 システムデザイン学部 情報科学科 — 予定卒業: 20XX</p>
+          <div class="mt-2" data-i18n="history_text" data-i18n-html="true">
+            <!-- history table will be injected here by i18n -->
+          </div>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-code mr-2 text-green-600"></i><span data-i18n="skills_title">スキル (Skills)</span></h2>
-          <p class="mt-2" data-i18n="skills_text">HTML, CSS, JavaScript, Tailwind CSS, 基本的なサーバーサイド知識</p>
+          <p class="mt-2" data-i18n="skills_text"></p>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-star mr-2 text-red-500"></i><span data-i18n="strength_title">強み (Strength)</span></h2>
-          <p class="mt-2" data-i18n="strength_text">粘り強く課題に向き合う力、ドキュメント化と協調性に優れる点。</p>
+          <p class="mt-2" data-i18n="strength_text"></p>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
           <h2 class="text-xl font-medium"><i class="fas fa-folder-open mr-2 text-purple-600"></i><span data-i18n="portfolio_title">成果物 (Portfolio)</span></h2>
           <ul class="mt-2 space-y-1">
-            <li><a href="./calendar.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item1">カレンダー（ローカルページ）</a></li>
-            <li><a href="./introduction.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item2">イントロ（ローカルページ）</a></li>
-            <li><a href="https://github.com/TakuryuYo" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item3">GitHub プロフィール</a></li>
+            <li><a href="./calendar.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item1"></a></li>
+            <li><a href="./introduction.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item2"></a></li>
+            <li><a href="https://github.com/TakuryuYo" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="portfolio_item3"></a></li>
           </ul>
         </article>
 
         <article class="section bg-white p-4 rounded shadow-sm">
-          <h2 class="text-xl font-medium"><i class="fas fa-link mr-2 text-sky-600"></i><span data-i18n="links_title">リンク (Links)</span></h2>
+          <h2 class="text-xl font-medium"><i class="fas fa-link mr-2 text-sky-600"></i><span data-i18n="links_title">リンク</span></h2>
           <ul class="mt-2 space-y-1">
             <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="link_twitter">Twitter</a></li>
             <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline" data-i18n="link_linkedin">LinkedIn</a></li>
@@ -136,26 +140,48 @@
           summary: '東京都立大学 システムデザイン学部 情報科学科 4年生 — 船井総合研究所 長期インターン（ケーススタディ中）',
           profile_title: '自己紹介 (Profile)',
           profile_text: 'プログラミング・UI設計・問題解決が得意です。チームでの開発・コミュニケーションを大切にします。',
-          achievement_title: '実績 (Achievement)',
+          achievement_title: '実績',
           achievement_item1: '長期インターンでのケーススタディ参加',
           achievement_item2: '学内プロジェクトで Web アプリを開発',
           history_title: '学歴 (History)',
           history_text: '東京都立大学 システムデザイン学部 情報科学科 — 予定卒業: 20XX',
-          skills_title: 'スキル (Skills)',
+          skills_title: 'スキル',
           skills_text: 'HTML, CSS, JavaScript, Tailwind CSS, 基本的なサーバーサイド知識',
-          strength_title: '強み (Strength)',
+          strength_title: '強み',
           strength_text: '粘り強く課題に向き合う力、ドキュメント化と協調性に優れる点。',
-          portfolio_title: '成果物 (Portfolio)',
+          portfolio_title: '成果物 ',
           portfolio_item1: 'カレンダー（ローカルページ）',
           portfolio_item2: 'イントロ（ローカルページ）',
           portfolio_item3: 'GitHub プロフィール',
-          links_title: 'リンク (Links)',
+          links_title: 'リンク',
           link_twitter: 'Twitter',
           link_linkedin: 'LinkedIn',
-          link_mail: 'メール'
+          link_mail: 'メール',
+          history_text: `
+            <div class="overflow-x-auto">
+              <table class="table-auto w-full text-sm">
+                <thead>
+                  <tr class="text-left">
+                    <th class="px-2 py-1">年月</th>
+                    <th class="px-2 py-1">学校</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="px-2 py-1">2017年3月</td><td class="px-2 py-1">横浜市立鶴ヶ峯中学校　卒業</td></tr>
+                  <tr><td class="px-2 py-1">2017年4月</td><td class="px-2 py-1">神奈川県立横浜国際高等学校国際科 入学</td></tr>
+                  <tr><td class="px-2 py-1">2020年3月</td><td class="px-2 py-1">神奈川県立横浜国際高等学校国際科 卒業</td></tr>
+                  <tr><td class="px-2 py-1">2020年4月</td><td class="px-2 py-1">東京都立大学システムデザイン学部情報科学科　国際副専攻　入学</td></tr>
+                  <tr><td class="px-2 py-1">2022年9月〜2023年5月</td><td class="px-2 py-1">イギリス・ノーザンブリア大学（Engineering and Environment）に交換留学</td></tr>
+                  <tr><td class="px-2 py-1">2025年3月</td><td class="px-2 py-1">東京都立大学システムデザイン学部情報科学科　国際副専攻　卒業</td></tr>
+                  <tr><td class="px-2 py-1">2025年4月</td><td class="px-2 py-1">東京都立大学大学院システムデザイン研究科情報科学域　入学</td></tr>
+                  <tr><td class="px-2 py-1">2027年3月（見込）</td><td class="px-2 py-1">東京都立大学大学院システムデザイン研究科情報科学域　卒業見込み</td></tr>
+                </tbody>
+              </table>
+            </div>
+          `
         },
         en: {
-          name: 'Takuryu Yang',
+          name: 'Takuryu Yo',
           summary: 'Student, Systems Design — Department of Information Science. Intern at Funai Research Institute (case study).',
           profile_title: 'Profile',
           profile_text: 'Skilled in programming, UI design and problem solving. Values teamwork and clear communication.',
@@ -176,6 +202,29 @@
           link_twitter: 'Twitter',
           link_linkedin: 'LinkedIn',
           link_mail: 'Email'
+          ,
+          history_text: `
+            <div class="overflow-x-auto">
+              <table class="table-auto w-full text-sm">
+                <thead>
+                  <tr class="text-left">
+                    <th class="px-2 py-1">Date</th>
+                    <th class="px-2 py-1">School / Event</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="px-2 py-1">Mar 2017</td><td class="px-2 py-1">Graduated Tsurugamine Junior High School, Yokohama</td></tr>
+                  <tr><td class="px-2 py-1">Apr 2017</td><td class="px-2 py-1">Entered Kanagawa Prefectural Yokohama International High School, International Course</td></tr>
+                  <tr><td class="px-2 py-1">Mar 2020</td><td class="px-2 py-1">Graduated Kanagawa Prefectural Yokohama International High School, International Course</td></tr>
+                  <tr><td class="px-2 py-1">Apr 2020</td><td class="px-2 py-1">Entered Tokyo Metropolitan University, Systems Design — Department of Information Science (International Minor)</td></tr>
+                  <tr><td class="px-2 py-1">Sep 2022 — May 2023</td><td class="px-2 py-1">Exchange at Northumbria University (Engineering and Environment), UK</td></tr>
+                  <tr><td class="px-2 py-1">Mar 2025</td><td class="px-2 py-1">Graduated Tokyo Metropolitan University, Systems Design — Department of Information Science (International Minor)</td></tr>
+                  <tr><td class="px-2 py-1">Apr 2025</td><td class="px-2 py-1">Entered Tokyo Metropolitan University Graduate School, Systems Design (Information Science)</td></tr>
+                  <tr><td class="px-2 py-1">Mar 2027 (expected)</td><td class="px-2 py-1">Expected graduation, Tokyo Metropolitan University Graduate School, Systems Design (Information Science)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          `
         }
       };
 
@@ -183,7 +232,12 @@
         const dict = i18n[lang] || i18n.jp;
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
-          if(dict[key]) el.textContent = dict[key];
+          // if element has data-i18n-html, set innerHTML, otherwise set textContent
+          if(el.getAttribute('data-i18n-html')){
+            if(dict[key]) el.innerHTML = dict[key];
+          } else {
+            if(dict[key]) el.textContent = dict[key];
+          }
         });
         localStorage.setItem('preferredLang',''+lang);
         // update which language buttons are visible in the header (show only the alternate)
